@@ -9,7 +9,6 @@ module.exports = function (app) {
   app.route('/api/translate')
     .post((req, res) => {
       const { text, locale } = req.body
-      console.log(text, locale)
 
       if (text == '' && locale) {
         return res.json({ error: 'No text to translate' })
